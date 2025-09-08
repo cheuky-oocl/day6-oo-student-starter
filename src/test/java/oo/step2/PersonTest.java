@@ -13,7 +13,7 @@ public class PersonTest {
     public void should_return_message_with_name_and_age_when_introduce_a_person_of_student(){
         Person person = new Student(1, "Tom", 18);
 
-        assertEquals("My name is Tom. I am 18 years old. I am a student", person.introduce());
+        assertEquals("My name is Tom. I am 18 years old. I am a student.", person.introduce());
     }
 
     @Test
