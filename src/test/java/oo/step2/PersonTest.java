@@ -20,6 +20,6 @@ public class PersonTest {
     public void should_retrun_message_with_name_and_age_when_introduce_a_person_of_teacher(){
         Person person = new Teacher(1, "Jerry", 21);
 
-        assertEquals("My name is Tom. I am 18 years old. I am a teacher.", person.introduce());
+        assertEquals("My name is Jerry. I am 21 years old. I am a teacher.", person.introduce());
     }
 }

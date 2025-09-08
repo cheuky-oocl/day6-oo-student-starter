@@ -11,7 +11,7 @@ public class TeacherTest {
     public void should_return_message_with_name_and_age_when_introduce_a_person_of_teacher(){
         Teacher teacher = new Teacher(1, "Jerry", 21);
 
-        assertEquals("My name is Tom. I am 18 years old. I am a teacher", teacher.introduce());
+        assertEquals("My name is Jerry. I am 21 years old. I am a teacher.", teacher.introduce());
     }
 
     @Test
