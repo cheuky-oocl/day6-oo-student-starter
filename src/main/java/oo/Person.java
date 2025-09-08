@@ -2,7 +2,7 @@ package oo;
 
 import java.util.Objects;
 
-public class Person {
+public abstract class Person {
     private int id;
     private String name;
     private int age;
@@ -27,5 +27,13 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
