@@ -1,10 +1,20 @@
 package oo.step3;
 
+import oo.Klass;
+import oo.Student;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 public class StudentTest {
 
-    // when student not join klass and isIn klass then return false
+    @Test
+    public void should_return_false_when_student_not_join_klass_and_is_not_in_klass(){
+        Student student= new Student(1, "Tom", 18);
+        Klass klass= new Klass(1);
 
-    // when student join klass and isIn klass then return false
+        assertFalse(student.isIn(klass));
+    }
 
     // when student join two klass then return recently klass
 
