@@ -9,6 +9,9 @@ public class Student extends Person {
 
     @Override
     public String introduce() {
+        if (klass != null && klass.getLeader() == this) {
+            return String.format("My name is %s. I am %d years old. I am a student. I am the leader of class %d.", getName(), getAge(), klass.getNumber());
+        }
         return String.format("My name is %s. I am %d years old. I am a student. I am in class %d.", getName(), getAge(), klass.getNumber());
     }
 
