@@ -18,7 +18,7 @@ public class StudentTest {
     @Test
     public void should_return_true_when_equals_two_same_id_student(){
         Student student = new Student(1, "Tom", 18);
-        Student student2 = new Student(1, "Tom", 18);
+        Student student2 = new Student(1, "Michael", 30);
 
         assertTrue(student.equals(student2));
     }
