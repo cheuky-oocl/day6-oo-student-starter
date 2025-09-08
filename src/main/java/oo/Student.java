@@ -13,4 +13,7 @@ public class Student extends Person {
     public boolean isIn(Klass klass) {
         return true;
     }
+
+    public void join(Klass klass) {
+    }
 }
