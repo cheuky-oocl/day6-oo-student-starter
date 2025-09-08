@@ -4,8 +4,7 @@ import oo.Klass;
 import oo.Student;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StudentTest {
 
@@ -24,11 +23,11 @@ public class StudentTest {
 
         student.join(klass);
 
-        assertFalse(student.isIn(klass));
+        assertTrue(student.isIn(klass));
     }
 
     @Test
-    public void should_return_recently_klass_when_student_join_two_klass(){
+    public void should_return_recently_klass_when_student_join_two_klass() {
         Student student = new Student(1, "Tom", 18);
         Klass klass = new Klass(1);
         Klass klass2 = new Klass(2);
@@ -40,6 +39,13 @@ public class StudentTest {
         assertTrue(student.isIn(klass2));
     }
 
-    // when introduce a student is in a class then return message with name age and class
+    @Test
+    public void should_return_message_with_name_and_age_and_class_when_introduce_a_student(){
+        Student student = new Student(1, "Tom", 18);
+        Klass klass = new Klass(1);
 
+        student.join(klass);
+
+        assertEquals("My name is Tom. I am 18 years old. I am a student. I am in class 1.", student.introduce());
+    }
 }
